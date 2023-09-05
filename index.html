@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>combo</title>
+  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="settings">
+    <h1 class="header">Генератор условий mindbox</h1>
+    <p class="descr">
+      Возможны 3 основных случая: <br><br>
+      1. Необходимо вывести 1 из n элементов, тогда сгенерируются условия для вывода только 1 блока, первого попавшего под условие <br><br>
+      2. Если это значение n из n, тогда будут выводиться все доступные пользователю сегменты <br><br>
+      3. Если же ввести k из n, где 1 < k < n, тогда выводятся первые k доступные сегментов пользователю, с учётом приоритета
+    </p>
+    Введите названия сегментов в поле ниже через ENTER <br>
+    ВАЖНО: Вводите сегменты в порядке убывания их приоритета
+    <textarea class="segments" name="segments" cols="40" rows="10"></textarea>
+    <div class="settings-quantity">
+      Отображать
+      <input type="number" class="quantity-k">
+      из
+      <input type="number" class="quantity-n">
+    </div>
+    <div>
+      <button class="create-btn">Сгенерировать</button>
+      <button class="copy-btn">Скопировать папирус</button>
+    </div>
+  </div>
+  <div class="blocks"></div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.header {
+  font-size: 24px;
+}
+
+.descr {
+  max-width: 600px;
+  padding: 10px 0;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  text-align: left;
+}
+
+.segments {
+  display: block;
+  margin: 20px 0;
+}
+
+.quantity-k,
+.quantity-n {
+  max-width: 40px;
+}
+
+.create-btn,
+.copy-btn {
+  margin: 20px 0;
+}
+
+.create-btn {
+  margin-right: 10px;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 600px;
+  background-color: orange;
+}
+
+.start,
+.end {
+  text-align: center;
+  margin: 10px 0;
+}
+
