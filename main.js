@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const demo =
   `
-  DostupenRetejlerPyaterochka
-  DostupenRetejlerMagnit
-  DostupenRetejlerAshan
-  DostupenRetejlerLenta
-  DostupenRetejlerMetro
-  DostupenRetejlerVernyj
-  DostupenRetejlerPerekrestok`;
+  Сегмент1
+  Сегмент2
+  Сегмент3
+  Сегмент4
+  Сегмент5
+  Сегмент6
+  Сегмент7`;
 
   segments.textContent = demo;
 
