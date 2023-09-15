@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+gmentdocument.addEventListener('DOMContentLoaded', () => {
 
   const segments = document.querySelector('.segments');
   const quantityN = document.querySelector('.quantity-n');
@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const demo =
   `
-  Сегмент1
-  Сегмент2
-  Сегмент3
-  Сегмент4
-  Сегмент5
-  Сегмент6
-  Сегмент7`;
+  segmentName1
+  segmentName2
+  segmentName3
+  segmentName4
+  segmentName5
+  segmentName6
+  segmentName7`;
 
   segments.textContent = demo;
 
@@ -150,8 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
         fullCondition += `@{if else Recipient.IsInSegment("${segmentsList[i]}")}\n<!-- Block ${i + 1} -->\n`;
         renderBlocks(i, `@{if else Recipient.IsInSegment("${segmentsList[i]}")}`);
       }
-      fullCondition += `@{if else Recipient.IsInSegment("${segmentsList[n - 1]}")}\n<!-- Block ${n} -->\n@{end if}`;
-      renderBlocks(n - 1, `@{if else Recipient.IsInSegment("${segmentsList[n - 1]}")}`, `@{end if}`);
+      fullCondition += `@{else if Recipient.IsInSegment("${segmentsList[n - 1]}")}\n<!-- Block ${n} -->\n@{end if}`;
+      renderBlocks(n - 1, `@{else if Recipient.IsInSegment("${segmentsList[n - 1]}")}`, `@{end if}`);
     } else if (parseInt(k) > 1 && parseInt(k) <= n) {
       for (let i = 0; i < k; i++) {
         fullCondition += `@{if Recipient.IsInSegment("${segmentsList[i]}")}\n<!-- Block ${i + 1} -->\n@{end if}\n`
