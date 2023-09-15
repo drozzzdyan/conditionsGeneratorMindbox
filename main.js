@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fullCondition += `@{if Recipient.IsInSegment("${segmentsList[0]}")}\n<!-- Block 1 -->\n`;
       renderBlocks(0, `@{if Recipient.IsInSegment("${segmentsList[0]}")}`);
       for (let i = 1; i < n - 1; i++) {
-        fullCondition += `@{if Recipient.IsInSegment("${segmentsList[i]}")}\n<!-- Block ${i + 1} -->\n`;
+        fullCondition += `@{if else Recipient.IsInSegment("${segmentsList[i]}")}\n<!-- Block ${i + 1} -->\n`;
         renderBlocks(i, `@{if else Recipient.IsInSegment("${segmentsList[i]}")}`);
       }
       fullCondition += `@{if else Recipient.IsInSegment("${segmentsList[n - 1]}")}\n<!-- Block ${n} -->\n@{end if}`;
